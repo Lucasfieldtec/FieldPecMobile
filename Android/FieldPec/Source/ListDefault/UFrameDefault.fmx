@@ -1,0 +1,5 @@
+object FrameDefault: TFrameDefault
+  Size.Width = 372.000000000000000000
+  Size.Height = 174.000000000000000000
+  Size.PlatformDefault = False
+end

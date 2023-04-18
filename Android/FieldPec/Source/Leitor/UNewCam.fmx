@@ -1,0 +1,52 @@
+object FrmCameraNew: TFrmCameraNew
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 336
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object ColorBox: TColorBox
+    Align = Bottom
+    Color = claWhite
+    Position.Y = 456.000000000000000000
+    Size.Width = 336.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object LabelBarcode: TLabel
+      Align = Client
+      ControlType = Platform
+      Size.Width = 336.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.WordWrap = False
+      TabOrder = 0
+    end
+  end
+  object Panel: TPanel
+    Align = Client
+    ControlType = Platform
+    Size.Width = 336.000000000000000000
+    Size.Height = 456.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object ACamera: TACamera
+    PreviewControl = Panel
+    OnDataReady = ACameraDataReady
+    OnDisplayRationale = ACameraDisplayRationale
+    OnPermission = ACameraPermission
+    Left = 48
+    Top = 64
+  end
+  object FObr: TFObr
+    Left = 112
+    Top = 64
+  end
+end
